@@ -7,7 +7,18 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+  const result=[];
+  for(const element of array){
+    if(Array.isArray(element)){
+      for(const e of element){
+        result.push(e);
+      }
+    }
+    else{
+      result.push(element);
+    }
+  }
+  return result;
 }
 
 

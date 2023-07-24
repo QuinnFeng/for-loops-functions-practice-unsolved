@@ -6,7 +6,17 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-
+  let max=Number.MIN_SAFE_INTEGER;
+  let account;
+  const greatestPositiveBalance=[];
+  for(const a of array){
+    if(a.balance>max){
+      max=a.balance;
+      account=a;
+    }
+  }
+  greatestPositiveBalance.push(account);
+  return greatestPositiveBalance;
 }
 
 

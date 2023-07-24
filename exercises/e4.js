@@ -5,10 +5,24 @@
 
 export function findMinValueInArray(array) {
   // Your code goes here...
+  let min=Number.MAX_SAFE_INTEGER;
+  for(const n of array){
+    if(n<min){
+      min=n;
+    }
+  }
+  return min;
 }
 
 export function findMaxValueInArray(array) {
   // Your code goes here...
+  let max=Number.MIN_SAFE_INTEGER;
+  for(const n of array){
+    if(n>max){
+      max=n;
+    }
+  }
+  return max;
 }
 
 // === TEST YOURSELF ===

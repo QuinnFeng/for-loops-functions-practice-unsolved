@@ -6,7 +6,19 @@
 
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
-  
+  let min=Number.MAX_SAFE_INTEGER;
+  let account;
+  const leastPositiveBalance=[];
+  for(const a of array){
+    if(a.balance>0 && a.balance<min){
+      min=a.balance;
+      account=a;
+    }
+  }
+  if(account){
+    leastPositiveBalance.push(account);
+  }
+  return leastPositiveBalance;
 }
 
 // === TEST YOURSELF ===
