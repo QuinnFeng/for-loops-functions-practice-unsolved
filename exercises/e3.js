@@ -26,11 +26,12 @@ export function getAverage(array) {
  * */ 
 
 export function getStringSum(str) {
-  // Your code goes here...
-  str = str.replace(/\D+/g, '');
+
   let sum=0;
-  for(const n of str.split('')){
-    sum+= parseInt(n);
+  for(const char of str){
+    if(!isNaN(+char)){
+        sum+= +char;
+    }
   }
   return sum;
 }
